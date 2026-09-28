@@ -1,4 +1,4 @@
-# MA-452.github.io
+# matiasaldom.me
 Personal portfolio website showcasing projects, skills, and experience.
 
 ## Tech
