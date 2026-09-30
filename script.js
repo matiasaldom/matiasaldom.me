@@ -151,8 +151,8 @@ document.querySelectorAll('.project-trigger').forEach(trigger => {
 
         const links = data.links || [];
         modalLinks.innerHTML = links.map(link => `
-            <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-5 text-black font-black uppercase tracking-[0.3em] text-[10px] hover:gap-8 transition-all group">
-                ${link.label} <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-2 transition-transform"></i>
+            <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 pb-1 border-b border-ink font-medium hover:text-muted hover:border-muted transition-colors">
+                ${link.label} <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
             </a>
         `).join('');
         modalLinks.classList.toggle('hidden', links.length === 0);
@@ -163,12 +163,6 @@ document.querySelectorAll('.project-trigger').forEach(trigger => {
 
         // Re-render Lucide icons for the freshly injected link arrows
         lucide.createIcons();
-    });
-    trigger.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            trigger.click();
-        }
     });
 });
 
