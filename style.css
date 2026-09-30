@@ -61,6 +61,25 @@ body {
     letter-spacing: -0.05em;
 }
 
+@media (max-width: 767px) {
+    .ghost-number {
+        font-size: 8rem;
+        top: -3rem;
+    }
+    /* Wide screenshots don't need a tall image area in the modal */
+    #modal-image-container:has(.aspect-laptop) {
+        height: 36vh;
+    }
+}
+
+/* Resume dropdown */
+.resume-menu summary::-webkit-details-marker {
+    display: none;
+}
+.resume-menu[open] .resume-chevron {
+    transform: rotate(180deg);
+}
+
 /* Modal Overrides for cleaner padding and more glass */
 #project-modal {
     display: none;
